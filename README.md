@@ -5,13 +5,20 @@
 git clone https://github.com/Celicin-R206/integration_api_goalpay
 ---
 cd integration_api_goalpay
-
+---
 2 - Installer les dépendances
+---
 npm install
+---
 
 3 - Lancer le projet en mode développement
+
+---
 npm run dev
+---
+
 Le serveur sera disponible sur http://localhost:3000
+---
 
 4 - Migration de la base de données
 # Générer la migration
