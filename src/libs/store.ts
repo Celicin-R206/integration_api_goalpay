@@ -5,6 +5,8 @@ export interface CartItem {
   label: string;
   unit_price: number;
   quantity: number;
+  tag: string;
+  image: string;
 }
 
 interface CartState {
@@ -28,7 +30,7 @@ export const useCartStore = create<CartState>()(
               items: state.items.map((i) =>
                 i.label === item.label
                   ? { ...i, quantity: i.quantity + item.quantity }
-                  : i
+                  : i,
               ),
             };
           }
@@ -39,7 +41,7 @@ export const useCartStore = create<CartState>()(
           items: state.items.map((item) =>
             item.label === label
               ? { ...item, quantity: item.quantity + 1 }
-              : item
+              : item,
           ),
         })),
       decreaseQuantity: (label) =>
@@ -48,7 +50,7 @@ export const useCartStore = create<CartState>()(
             .map((item) =>
               item.label === label
                 ? { ...item, quantity: item.quantity - 1 }
-                : item
+                : item,
             )
             .filter((item) => item.quantity > 0),
         })),
@@ -61,6 +63,6 @@ export const useCartStore = create<CartState>()(
     {
       name: "cart-storage",
       storage: createJSONStorage(() => localStorage),
-    }
-  )
+    },
+  ),
 );

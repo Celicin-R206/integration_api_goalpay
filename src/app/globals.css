@@ -10,15 +10,18 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-border: var(--border);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --border: #4b5563;
   }
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  border-color: var(--border);
 }
