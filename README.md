@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🚀 Installation et configuration du projet
 
-## Getting Started
+1 - Cloner le projet
+git clone https://github.com/Celicin-R206/integration_api_goalpay
+cd integration_api_goalpay
 
-First, run the development server:
+2 - Installer les dépendances
+npm install
 
-```bash
+3 - Lancer le projet en mode développement
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Le serveur sera disponible sur http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4 - Migration de la base de données
+# Générer la migration
+npx drizzle-kit generate
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Appliquer la migration
+npx drizzle-kit migrate
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+5 - Configuration des variables d'environnement
+Modifie le fichier .env pour ajouter tes clés GoalPay
 
-## Learn More
+# Token GoalPay
+TGP_TOKEN=ton_token_goalpay
 
-To learn more about Next.js, take a look at the following resources:
+# Clé secrète GoalPay
+SK_SECRET_KEY=ta_cle_secrete_goalpay
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+⚠️ Assure-toi que ces variables commencent par TGP_ et SK_ comme indiqué.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🎉 Bonne chance avec l’installation et le lancement du projet !
+Si tu suis ces étapes, tout devrait bien se passer.
+N’hésite pas à vérifier que tes clés GoalPay sont correctes et que la base de données est bien migrée avant de tester les fonctionnalités. 🚀
