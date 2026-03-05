@@ -2,6 +2,7 @@
 
 1 - Cloner le projet
 git clone https://github.com/Celicin-R206/integration_api_goalpay
+
 cd integration_api_goalpay
 
 2 - Installer les dépendances
