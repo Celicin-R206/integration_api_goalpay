@@ -37,9 +37,13 @@ export default function CartPage() {
             </Link>
           </div>
         ) : (
-          <div className="grid md:grid-cols-3 gap-6">
-            <CartItemsList />
-            <CartSummary />
+          <div className="flex gap-6">
+            <div className="w-[60%]">
+              <CartItemsList />
+            </div>
+            <div className="w-[40%]">
+              <CartSummary />
+            </div>
           </div>
         )}
       </div>

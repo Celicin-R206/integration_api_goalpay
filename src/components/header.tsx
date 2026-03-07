@@ -12,7 +12,6 @@ export default function Header() {
     <header className="bg-[#111111] sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <Link
             href="/"
             className="flex items-center gap-2 group"
@@ -27,7 +26,6 @@ export default function Header() {
             </span>
           </Link>
 
-          {/* Nav + Panier + GitHub */}
           <nav className="flex items-center gap-8">
             <Link
               href="/"
@@ -40,9 +38,7 @@ export default function Header() {
               Mes Commandes
             </Link>
 
-            {/* GitHub + Panier côte à côte */}
             <div className="flex items-center gap-3 sm:gap-4">
-              {/* Bouton Panier */}
               <Link
                 href="/cart"
                 className="relative flex items-center gap-2 bg-white hover:bg-[#0070f8] text-[#111] hover:text-white text-sm font-bold px-4 py-2 rounded-lg transition-all duration-200"
@@ -56,9 +52,8 @@ export default function Header() {
                 )}
               </Link>
 
-              {/* Icône GitHub (lien vers ton repo par ex.) */}
               <Link
-                href="https://github.com/ton-utilisateur/ton-repo" // ← change le lien !
+                href="https://github.com/Celicin-R206/integration_api_goalpay"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-black bg-white rounded-full p-2"

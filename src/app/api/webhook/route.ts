@@ -49,12 +49,17 @@ export async function POST(request: NextRequest) {
       return new NextResponse("Invalid JSON", { status: 400 });
     }
 
-    const { reference, amount, order_reference } = payload.data || {};
+    const { reference, amount, order_reference, currency, description, error } =
+      payload.data || {};
 
+    console.log("Payload Data : ", payload.data);
+    console.log("Erreur :", error);
     console.log("Event :", payload.event);
     console.log("Reference commande :", reference);
     console.log("GoalPay order reference :", order_reference);
     console.log("Montant :", amount);
+    console.log("Devise :", currency);
+    console.log("Description :", description);
 
     // if (!reference || !amount || !order_reference) {
     //   return new NextResponse("Missing fields", { status: 400 });
